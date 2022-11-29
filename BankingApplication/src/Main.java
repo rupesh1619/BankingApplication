@@ -60,7 +60,7 @@ public class Main {
 
                 if (userName != null || userCode != null) {
                     account_details.put(userCode, new UserDetails(userName, account_balance, deposit, withdraw));
-                    System.out.println(account_details);
+                    // System.out.println(account_details);
                 } else {
                     System.out.println("Please enter valid userName or userCode");
                 }
@@ -77,8 +77,8 @@ public class Main {
 
                 // after entering the deposit add that amount to the current account_balance.
                 account_details.put(userCode, new UserDetails(userName, account_bal + deposit, deposit, 0));
-                String user_details = String.valueOf(account_details.get(userCode));
-                System.out.println(user_details);
+                // String user_details = String.valueOf(account_details.get(userCode));
+                // System.out.println(user_details);
             } else if (command == withdraw_command) { // WITHDRAW AMOUNT
                 // ask user to enter UserCode and amount to be withdrawn
                 System.out.println("Enter UserCode: ");
@@ -92,8 +92,8 @@ public class Main {
 
                 // after entering the amount to be withdrawn subtract the withdrawn amount from current account balance.
                 account_details.put(userCode, new UserDetails(userName, account_bal - withdraw, 0, withdraw));
-                String user_details = String.valueOf(account_details.get(userCode));
-                System.out.println(user_details);
+                // String user_details = String.valueOf(account_details.get(userCode));
+                // System.out.println(user_details);
             } else if (command == balance_command) { // CHECK BALANCE
                 System.out.println("Enter UserCode: ");
                 String userCode = sc1.nextLine();
